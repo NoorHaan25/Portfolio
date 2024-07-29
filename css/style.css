@@ -6,7 +6,7 @@
   text-decoration: none;
 }
 :root {
-  --main-color: #b98ab9;
+  --main-color: #ba8aba;
   --background-color:#0d1224;
   --background-color-two: #1a1443;
   --color-white: #ffffff;
@@ -19,8 +19,39 @@
   --color-cyan:#22d3ee;
   --linear-gradient:linear-gradient(90deg, #833ab4 0%, rgba(185,138,185,1) 50%, rgba(148,187,233,1) 100%);
 }
+::-webkit-scrollbar{
+  width: 7px;
+}
+::-webkit-scrollbar-track{
+  background-color: #f6f6f6;
+  background-color: var(--background-color);
+
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
 html{
   scroll-behavior: smooth;
+}
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--background-color);
+}
+ul {
+  margin-bottom: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cairo', sans-serif;
+}
+a:hover{
+  text-decoration: none;
+}
+p{
+  margin-bottom: 10px;
+}
+section{
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 button{
   border: none;
@@ -62,27 +93,7 @@ button{
 .m-t-20{
   margin-top: 20px;
 }
-ul {
-  margin-bottom: 0;
-}
-body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: var(--background-color);
-  /* position: relative; */
-}
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cairo', sans-serif;
-}
-a:hover{
-  text-decoration: none;
-}
-p{
-  margin-bottom: 10px;
-}
-section{
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
+
 .heading{
   display: flex;
   justify-content: center;
@@ -138,24 +149,28 @@ header{
   z-index: 1;
   position: absolute;
 }
-header .logo h1{
+
+.bg-light {
+  background-color: transparent !important;
+}
+.navbar-light .navbar-brand {
   color: var(--main-color);
   font-weight: 700;
+  font-size: 37px;
 }
-nav ul{
-  display: flex;
-  justify-content: end;
+.navbar-light .navbar-toggler i{
+  color: var(--main-color);
+  font-size: 30px;
 }
-nav ul li a{
+.navbar-light .navbar-nav .nav-link{
   display: block;
   padding: 41px;
   transition: 0.3s;
   color: var(--color-white);
-  /* font-size: 18px; */
   text-transform:uppercase;
   transition: all 0.3s linear;
 }
-nav ul li a:hover{
+.navbar-light .navbar-nav .nav-link:hover{
   color: var(--main-color);
 }
 /* start section landing */
@@ -190,6 +205,7 @@ nav ul li a:hover{
 .intro .buttons{
   margin-top: 30px;
   display: flex;
+  flex-wrap: wrap;
 }
 .landing .intro .icons a{
   color: var(--main-color);
@@ -204,7 +220,7 @@ nav ul li a:hover{
   padding: 10px 20px ;
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin:20px 20px 0 0;
 }
 .intro .buttons button:last-child{
   background-color: transparent;
@@ -235,12 +251,7 @@ nav ul li a:hover{
   height: calc(100% + 5px);
   z-index: -1;
 }
-.object-card{
-  border: 1px solid var(--color-border);
-  border-radius: 20px;
-  background-image:linear-gradient(to right, var(--background-color), #1a1f33); ;
 
-}
 .card-skills{
   position: relative;
 }
@@ -255,6 +266,12 @@ nav ul li a:hover{
   z-index: -1;
   border-radius: 20px;
   background: var(--linear-gradient);
+}
+.object-card{
+  border: 1px solid var(--color-border);
+  border-radius: 20px;
+  background-image:linear-gradient(to right, var(--background-color), #1a1f33); ;
+
 }
 .object-card .bubbles{
   display: flex;
@@ -279,7 +296,7 @@ nav ul li a:hover{
 }
 .object-card code{
   display: block;
-  margin: 20px;
+  margin: 20px 0;
   font-size: 16px;
 }
 .object-card div{
@@ -369,11 +386,11 @@ nav ul li a:hover{
   flex-direction: column;
   padding: 50px 0;
 }
+
 .project-card{
   position: sticky;
-  top: 20px;
+  top: 10px;
   margin-top: 20px;
-  height: 480px;
 }
 .project-card .project-name{
   display: flex;
@@ -424,14 +441,13 @@ nav ul li a:hover{
 .education{
   background-image: url(../img/hero.svg);
   background-size: cover;
-  height: 100vh;
 }
 .wrapper-cards{
   margin: 50px 0;
 }
 .education .card-education{
   color: var(--color-white);
-  width: 500px;
+  width: 100%;
   height: 180px;
   border: 1px solid #2a2e5a;
   box-shadow: 16px 14px 20px #0000008c;
@@ -588,12 +604,6 @@ nav ul li a:hover{
 .contact .contact-info{
   margin-left: 20px;
 }
-.contact .contact-items{
-  
-}
-.contact .contact-items ul{
-  
-}
 .contact .contact-items li{
   display: flex;
   align-items: center;
@@ -654,6 +664,7 @@ nav ul li a:hover{
   cursor: pointer;
   transition: all 0.3s linear;
   opacity: 0;
+  z-index: 8888;
   animation: bounce 2s infinite;
 }
 .to-top i{
@@ -673,4 +684,104 @@ nav ul li a:hover{
   60% {
     transform: translateY(-3px);
   }
+}
+/* responsive */
+@media screen and (min-width:992px){
+}
+@media screen and (max-width:991.5px){
+}
+@media screen and (max-width:767.5px){
+}
+@media screen and (max-width:575.5px){
+}
+
+/* Responsive */
+@media screen and (max-width:992px){
+  header{
+    position: relative;
+  }
+  nav{
+    display: none;
+  }
+  .landing{
+    height:auto;
+    position: static;
+  }
+  .landing .row{
+    height: auto;
+    flex-direction: column-reverse;
+    gap: 40px;
+  }
+  .landing .intro .text p{
+    font-size: 40px;
+  }
+  .about .card-me {
+    padding-top: 30px;
+  }
+  .project-card{
+    top: -70%;
+  }
+  .wrapper-project .img {
+    display: flex;
+    justify-content: center;
+}
+.wrapper-project .row{
+  flex-direction: column-reverse;
+}
+}
+@media screen and (max-width:575.5px){
+  .landing .intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .landing .intro .text{
+    text-align: center;
+  }
+  .landing .intro .text p{
+    font-size: 32px;
+  }
+  .landing .intro .buttons {
+    justify-content: center;
+    gap: 15px;
+  }
+  .landing .intro .buttons button {
+    margin:0 0 0 0;
+  }
+  .project-card {
+    top: -100%;
+}
+}
+@media screen and (max-width:510px){
+  .education .card-education {
+    height: 220px;
+    padding: 0px;
+  }
+    .education .education-details {
+      flex-direction: column;
+    }
+    .education .education-details .education-info {
+      padding-left: 0px;
+      font-size: 15px;
+      text-align: center;
+  }
+  .contact .contact-info {
+    margin-left: 0px;
+  }
+  .contact .contact-items li {
+    flex-direction: column;
+    gap: 11px;
+  }
+  .contact .social-links .social-icons {
+    justify-content: center;
+  }
+  .contact .social-links .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-collapse {
+        justify-content: end;
+    }
 }
