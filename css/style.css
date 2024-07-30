@@ -156,7 +156,7 @@ header{
 .navbar-light .navbar-brand {
   color: var(--main-color);
   font-weight: 700;
-  font-size: 37px;
+  font-size: 32px;
 }
 .navbar-light .navbar-toggler i{
   color: var(--main-color);
