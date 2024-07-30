@@ -566,7 +566,8 @@ header{
 }
 .contact form input:focus,
 .contact form textarea:focus {
-  outline: 2px solid var(--main-color);
+  border: 2px solid var(--main-color);
+  outline: none;
 }
 .contact form .submit{
   position: relative;
@@ -600,6 +601,20 @@ header{
   width: calc(100% + 5px);
   height: calc(100% + 5px);
   z-index: -1;
+}
+.error-message{
+  color: red;
+  font-weight: 800;
+  display: none;
+}
+.contact form input.invalid,
+.contact form textarea.invalid {
+  border: 2px solid red;
+}
+.contact form input.invalid:focus,
+.contact form textarea.invalid:focus {
+  border: 2px solid red;
+  outline: none;
 }
 .contact .contact-info{
   margin-left: 20px;
@@ -685,16 +700,6 @@ header{
     transform: translateY(-3px);
   }
 }
-/* responsive */
-@media screen and (min-width:992px){
-}
-@media screen and (max-width:991.5px){
-}
-@media screen and (max-width:767.5px){
-}
-@media screen and (max-width:575.5px){
-}
-
 /* Responsive */
 @media screen and (max-width:992px){
   header{

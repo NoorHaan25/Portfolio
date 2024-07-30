@@ -76,12 +76,16 @@
             </div>
             <div class="buttons">
               <button>
-                <a href="#Contact">CONTACT ME</a>
-                <i class="fa-regular fa-id-card"></i>
+                <a href="#Contact">
+                  CONTACT ME
+                  <i class="fa-regular fa-id-card"></i>
+                </a>
               </button>
               <button>
-                <a href="https://drive.google.com/file/d/1tVZo7RslG7P7t5xEeJSzf2wyJRhpkLrJ/view?usp=sharing" target="_blank">GET RESUME</a>
-                <i class="fa-solid fa-circle-arrow-down"></i>
+                <a href="https://drive.google.com/file/d/1tVZo7RslG7P7t5xEeJSzf2wyJRhpkLrJ/view?usp=sharing" target="_blank">
+                  GET RESUME
+                  <i class="fa-solid fa-circle-arrow-down"></i>
+                </a>
               </button>
             </div>
           </div>
@@ -1235,9 +1239,10 @@
             <div class="contact-des">
               <p>If you have any questions or need further information, please feel free to reach out to me. I'm open to opportunities that match my expertise and interests.</p>
             </div>
-            <form action="https://api.web3forms.com/submit"  method="POST">
+            <form action="https://api.web3forms.com/submit"  method="POST" id="form">
               <input type="hidden" name="access_key" value="64b9c5d3-037d-47b6-a3f7-0b832119343c">
               <div class="input">
+                <p class="error-message" id="name-error">Please enter a valid name with at least 3 characters.</p>
                 <label for="name">Your Name</label>
                 <div class="input-wrapper">
                   <input type="text" name="name" id="name">
@@ -1245,6 +1250,7 @@
                 </div>
               </div>
               <div class="input"">
+                <p class="error-message" id="email-error">Please enter a valid email address.</p>
                 <label for="email">Your Email</label>
                 <div class="input-wrapper">
                   <i class="fa-solid fa-envelope"></i>
@@ -1252,6 +1258,7 @@
                 </div>
               </div>
               <div class="input">
+                <p class="error-message" id="message-error">Please enter a valid message with at least 3 characters.</p>
                 <label for="message">Your Message</label>
                 <div class="input-wrapper message">
                   <i class="fa-solid fa-paragraph"></i>
@@ -1259,8 +1266,10 @@
                 </div>
               </div>
               <div class="submit">
-                <button type="submit">Send Message</button>
-                <i class="fa-solid fa-envelope"></i>
+                <button type="submit" id="submit">
+                  Send Message
+                  <i class="fa-solid fa-envelope"></i>
+                </button>
               </div>
             </form>
           </div>
@@ -1299,7 +1308,6 @@
   <div class="to-top">
     <i class="fa-solid fa-arrow-up"></i>
   </div>
-  
   <script src="https://smtpjs.com/v3/smtp.js"></script>
   <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
