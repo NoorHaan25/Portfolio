@@ -717,8 +717,16 @@ header{
   }
   .landing .row{
     height: auto;
-    flex-direction: column-reverse;
+    /* flex-direction: column-reverse; */
     gap: 40px;
+  }
+  .landing .intro{
+    height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
   }
   .landing .intro .text p{
     font-size: 40px;
@@ -733,9 +741,9 @@ header{
     display: flex;
     justify-content: center;
 }
-.wrapper-project .row{
+/* .wrapper-project .row{
   flex-direction: column-reverse;
-}
+} */
 }
 @media screen and (max-width:575.5px){
   .landing .intro{
